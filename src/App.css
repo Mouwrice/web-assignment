@@ -9,22 +9,123 @@
     --white: #ffffff
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--petrol);
+    color: var(--white);
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
 }
 
 body > #root > div {
-    height: 100vh;
+    height: 100%;
+    overflow: hidden;
 }
 
 .background {
     background-image: url("./images/background.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     opacity: 20%;
     height: 100%;
     width: 100%;
     backdrop-filter: blur(100px);
     position: absolute;
     z-index: -1;
+}
+
+header {
+    overflow: hidden;
+    display: block;
+    padding: 20px 70px 20px 70px;
+}
+
+/* Stampix logo */
+header img {
+    float: left;
+    height: 5rem;
+}
+
+header ul {
+    float: right;
+    font-weight: bold;
+}
+
+header li {
+    display: inline;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+
+#main {
+    color: var(--petrol);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Common properties for consumer and business div */
+#main div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Style as button */
+#main div a {
+    display: block;
+    background: var(--turquoise);
+    width: 65%;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 0.3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: transform .2s; /* Animate on hover scaling */
+    margin: 4rem;
+    white-space: nowrap;
+}
+
+/* Visited style of button */
+#main div a:visited {
+    color: var(--petrol);
+}
+
+/* Grow in size on hover */
+#main div a:hover {
+    transform: scale(1.2);
+}
+
+h5 {
+    font-weight: normal;
+    margin: 4rem 0 0.5rem 0;
+}
+
+h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+#consumers {
+    background-color: var(--sunny-yellow);
+}
+
+#business {
+    background-color: var(--white);
 }

@@ -7,22 +7,22 @@ function App () {
     <div>
       <div className="background"/>
       <header>
-        <img src={logo} alt="logo"/>
-        <ul>
+        <img src={logo} id="logo" alt="logo"/>
+        <ul id="languageList">
           <li>NL</li>
           <li>FR</li>
           <li>EN</li>
         </ul>
       </header>
-      <div>
+      <div id="main">
         <div id="consumers">
-          <p>For consumers</p>
-          <p>Install the Stampix App and order prints in just a few clicks</p>
+          <h5>For consumers</h5>
+          <h3>Install the Stampix App and order prints in just a few clicks</h3>
           <a href="https://stampix.com">START PRINTING</a>
         </div>
         <div id="business">
-          <p>For business</p>
-          <p>Build emotional loyalty and brand engagement</p>
+          <h5>For business</h5>
+          <h3>Build emotional loyalty and brand engagement</h3>
           <a href="https://business.stampix.com">STAMPIX FOR BUSINESS</a>
         </div>
       </div>
