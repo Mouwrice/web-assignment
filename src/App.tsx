@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import logo from './images/logo-white-on-transparent.png'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <div className="background"/>
+      <header>
+        <img src={logo} alt="logo"/>
+        <ul>
+          <li>NL</li>
+          <li>FR</li>
+          <li>EN</li>
+        </ul>
       </header>
+      <div>
+        <div id="consumers">
+          <p>For consumers</p>
+          <p>Install the Stampix App and order prints in just a few clicks</p>
+          <a href="https://stampix.com">START PRINTING</a>
+        </div>
+        <div id="business">
+          <p>For business</p>
+          <p>Build emotional loyalty and brand engagement</p>
+          <a href="https://business.stampix.com">STAMPIX FOR BUSINESS</a>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
