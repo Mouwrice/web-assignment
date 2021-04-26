@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { initReactI18next, useTranslation } from 'react-i18next'
 import i18n from 'i18next'
 import './App.css'
@@ -23,6 +23,27 @@ i18n
           "businessText": "Build emotional loyalty and brand engagement",
           "businessLink" : "stampix for business"
         }
+      },
+      fr: {
+        translation: {
+          "consumers": "Pour consommateurs",
+          "consumersText": "Installez l'application Stampix et commandez des tirages en quelques clics",
+          "consumersLink": "commencer l'impression",
+          "business": "Pour le business",
+          "businessText": "Renforcez la fidélité émotionnelle et l'engagement de la marque",
+          "businessLink": "stampix pour les entreprises"
+        }
+
+      },
+      nl: {
+        translation: {
+          "consumers": "Voor gebruikers",
+          "consumersText": "Installeer de Stampix App en bestel afdrukken in slechts enkele klikken",
+          "consumersLink": "start printen",
+          "business": "Voor bedrijven",
+          "businessText": "Bouw emotionele loyaliteit en merkbetrokkenheid op",
+          "businessLink": "stampix voor bedrijven"
+        }
       }
     },
     lng: "en",
@@ -35,22 +56,27 @@ i18n
 
 function App () {
   const { t, i18n } = useTranslation();
+  const handleClick = (language: string) => () => {
+    i18n.changeLanguage(language);
+    setSelectedButton(language)
+  }
+  const [ selectedButton, setSelectedButton ] = useState("en");
   return (
     <div>
       <img src={background} className="background" alt={background}/>
       <header>
         <img src={logo} id="logo" alt="logo"/>
         <ul id="languageList">
-          <li>NL</li>
-          <li>FR</li>
-          <li>EN</li>
+          <li><button className={'nl' === selectedButton ? 'selected' : ''} onClick={handleClick('nl')}>nl</button></li>
+          <li><button className={'fr' === selectedButton ? 'selected' : ''} onClick={handleClick('fr')}>fr</button></li>
+          <li><button className={'en' === selectedButton ? 'selected' : ''} onClick={handleClick('en')}>en</button></li>
         </ul>
       </header>
       <div id="main">
         <div id="consumers">
           <div id="text">
             <h5>{t("consumers")}</h5>
-            <h3>{t("consumersText")}</h3>
+            <p>{t("consumersText")}</p>
           </div>
           <a href="https://stampix.com">{t("consumersLink")}</a>
           <img id="iphone" src={iphone} alt="iphone"/>
@@ -58,7 +84,7 @@ function App () {
         <div id="business">
           <div id="text">
             <h5>{t("business")}</h5>
-            <h3>{t("businessText")}</h3>
+            <p>{t("businessText")}</p>
           </div>
           <a href="https://business.stampix.com">{t("businessLink")}</a>
           <div id="logos">
