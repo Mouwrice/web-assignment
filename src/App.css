@@ -9,20 +9,12 @@
     --white: #ffffff
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background-color: var(--petrol);
     color: var(--white);
     text-align: center;
     font-family: 'Oxygen', sans-serif;
-}
-
-body > #root > div {
-    overflow: hidden;
 }
 
 img.background {
@@ -101,7 +93,7 @@ header ul li button.selected {
 #main {
     color: var(--petrol);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
     grid-auto-rows: 1fr; /* auto generated rows should be evenly sized */
     border-radius: 0.75rem;
     margin: 2rem auto;
@@ -175,11 +167,15 @@ h5 {
 /* grid containing the logos */
 #logos {
     display: flex;
+    align-items: center;
+    justify-content: center;
     max-height: 40%;
+    width: 100%;
     margin: auto;
+    flex-shrink: 0.5;
 }
 
 #logos > img {
-    margin: 1rem;
     object-fit: contain;
+    padding: 0.5rem;
 }

@@ -67,9 +67,9 @@ function App () {
       <header>
         <img src={logo} id="logo" alt="logo"/>
         <ul id="languageList">
-          <li><button className={'nl' === selectedButton ? 'selected' : ''} onClick={handleClick('nl')}>nl</button></li>
-          <li><button className={'fr' === selectedButton ? 'selected' : ''} onClick={handleClick('fr')}>fr</button></li>
-          <li><button className={'en' === selectedButton ? 'selected' : ''} onClick={handleClick('en')}>en</button></li>
+          <li><button id="nl" className={'nl' === selectedButton ? 'selected' : ''} onClick={handleClick('nl')}>nl</button></li>
+          <li><button id="fr" className={'fr' === selectedButton ? 'selected' : ''} onClick={handleClick('fr')}>fr</button></li>
+          <li><button id="en" className={'en' === selectedButton ? 'selected' : ''} onClick={handleClick('en')}>en</button></li>
         </ul>
       </header>
       <div id="main">
