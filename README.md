@@ -1,5 +1,11 @@
 # Stampix Web Assignment
 
+This is my submission for the stampix web assignment.
+
+## Running the development build
+
+`yarn start`
+
 **Important**: You can choose any technology stack you want, this repo contains a scaffolded web app with [Create React App](https://github.com/facebook/create-react-app).
 We will be evaluating the quality of your project, how you do it, is entirely up to you :)
 
