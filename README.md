@@ -3,6 +3,7 @@ This is my submission for the stampix web assignment.
 ## Running the development build
 
 `yarn install` - first time setup
+
 `yarn start`
 
 # Stampix Web Assignment
